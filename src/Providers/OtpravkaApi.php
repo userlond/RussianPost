@@ -74,7 +74,10 @@ class OtpravkaApi implements LoggerAwareInterface
                             // 'Accept' => 'application/json;charset=UTF-8'
                         ],
                         'timeout' => $this->timeout,
-                        'http_errors' => false
+                        'http_errors' => false,
+                        'curl' => [
+                            CURLOPT_SSLVERSION => CURL_SSLVERSION_TLSv1_2,
+                        ],
                     ]);
                 }
                 break;
@@ -84,7 +87,10 @@ class OtpravkaApi implements LoggerAwareInterface
                     $this->deliveryClient = new \GuzzleHttp\Client([
                         'base_uri' => 'https://delivery.pochta.ru/delivery/',
                         'timeout' => $this->timeout,
-                        'http_errors' => false
+                        'http_errors' => false,
+                        'curl' => [
+                            CURLOPT_SSLVERSION => CURL_SSLVERSION_TLSv1_2,
+                        ],
                     ]);
                 }
                 break;
@@ -99,7 +105,10 @@ class OtpravkaApi implements LoggerAwareInterface
                             'Accept' => 'application/json;charset=UTF-8'
                         ],
                         'timeout' => $this->timeout,
-                        'http_errors' => false
+                        'http_errors' => false,
+                        'curl' => [
+                            CURLOPT_SSLVERSION => CURL_SSLVERSION_TLSv1_2,
+                        ],
                     ]);
                 }
                 break;

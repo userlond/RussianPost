@@ -18,7 +18,8 @@
     "guzzlehttp/guzzle": "6.3 - 7.4",
     "psr/log": "^1.0",
     "ext-soap": "*",
-    "ext-json": "*"
+    "ext-json": "*",
+    "ext-curl": "*"
   },
   "autoload": {
     "psr-4": {

@@ -17,7 +17,10 @@ class Calculation implements LoggerAwareInterface
         $this->httpClient = new \GuzzleHttp\Client([
             'base_uri'=>'https://tariff.pochta.ru/tariff/'.self::VERSION.'/',
             'timeout' => $timeout,
-            'http_errors' => false
+            'http_errors' => false,
+            'curl' => [
+                CURLOPT_SSLVERSION => CURL_SSLVERSION_TLSv1_2,
+            ],
         ]);
     }
 
